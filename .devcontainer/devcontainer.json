@@ -1,0 +1,22 @@
+{
+    "name": "Svelte",
+    "workspaceFolder": "/app",
+    "dockerComposeFile": "../dev.yml",
+    "service": "svelte",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {},
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "svelte.svelte-vscode",
+                "ardenivanov.svelte-intellisense",
+                "fivethree.vscode-svelte-snippets",
+                "esbenp.prettier-vscode",
+                "VisualStudioExptTeam.vscodeintellicode"
+            ]
+        }
+    }
+}
