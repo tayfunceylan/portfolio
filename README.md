@@ -1,6 +1,6 @@
 # Portfolio
 
-Hello, this is my personal homepage. I am studying IT security at the Ruhr University Bochum.
+Hello, this is my personal homepage. In this project, i want learn and have fun with svelte, tailwindcss and devcontainer.
 
 ## Dev Container
 
