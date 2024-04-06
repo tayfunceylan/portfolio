@@ -15,7 +15,8 @@
                 "ardenivanov.svelte-intellisense",
                 "fivethree.vscode-svelte-snippets",
                 "esbenp.prettier-vscode",
-                "VisualStudioExptTeam.vscodeintellicode"
+                "VisualStudioExptTeam.vscodeintellicode",
+                "bradlc.vscode-tailwindcss"
             ]
         }
     }
