@@ -69,9 +69,9 @@
 					"
 				/>
 				<div
-					class="transition-color absolute -z-10 size-full rounded bg-mint-tulip-200 duration-500 ease-out group-hover:bg-white"
+					class="transition-color absolute size-full rounded bg-mint-tulip-200 mix-blend-multiply duration-500 ease-out group-hover:bg-white"
 				/>
-				<enhanced:img src="$lib/images/me.jpg" class="rounded mix-blend-multiply" alt="Portrait" />
+				<enhanced:img src="$lib/images/me.jpg" class="rounded" alt="Portrait" />
 			</div>
 		</div>
 	</div>
