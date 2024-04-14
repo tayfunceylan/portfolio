@@ -23,11 +23,12 @@
 		I’m an IT student specializing in cryptography. In my free time I like tinker with programming
 		projects .
 	</p>
-	<button
-		class="mt-7 rounded-md border-2 border-mint-tulip-500 p-4 font-mono text-mint-tulip-500/80 transition-colors duration-500 hover:bg-mint-tulip-500/20 hover:text-mint-tulip-400"
+	<a
+		href="https://github.com/tayfunceylan"
+		class="mt-7 text-center rounded-md border-2 border-mint-tulip-500 p-4 font-mono text-mint-tulip-500/80 transition-colors duration-500 hover:bg-mint-tulip-500/20 hover:text-mint-tulip-400"
 	>
 		Check out my GitHub!
-	</button>
+	</a>
 </div>
 
 <Section title="About Me" id="about">
