@@ -7,7 +7,7 @@
 </script>
 
 <nav
-	class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800/85 px-7 py-4 shadow-xl shadow-blue-zodiac-800 backdrop-blur-md transition-all duration-1000 md:px-9"
+	class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800/85 px-7 py-4  shadow-xl shadow-blue-zodiac-800 backdrop-blur-md transition-all duration-1000 md:px-9"
 >
 	<a href="/" class="text-4xl font-semibold text-mint-tulip-500">T</a>
 	<label class="peer relative size-10 text-mint-tulip-500 md:hidden">
@@ -34,11 +34,11 @@
 					"
 			></span>
 			<div
-				class="scroll group pointer-events-none fixed left-0 top-0 flex h-screen translate-x-[0vw] flex-nowrap transition duration-1000 peer-checked:-translate-x-[100vw]"
+				class="group pointer-events-none fixed left-0 top-0 flex h-screen translate-x-[0vw] flex-nowrap transition duration-1000 peer-checked:-translate-x-[100vw]"
 			>
 				<button
-					class="pointer-events-auto h-full w-[125vw] opacity-0 backdrop-blur-sm transition duration-1000
-						peer-checked:group-[]:block
+					class="pointer-events-auto h-full w-[125vw] scale-0 opacity-0 backdrop-blur-sm transition-opacity duration-1000
+						peer-checked:group-[]:scale-100
 						peer-checked:group-[]:opacity-100
 					"
 					onclick={toggle}

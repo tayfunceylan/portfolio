@@ -3,6 +3,19 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			keyframes: {
+				typing: {
+					from: { width: '0' },
+					to: { width: '100%' }
+				},
+				'blink-caret': {
+					'from, to': { 'border-color': 'transparent' },
+					'50%': { 'border-color': 'orange' }
+				}
+			},
+			animation: {
+				typing: 'typing 3s steps(40, end), blink-caret 0.75s step-end infinite'
+			},
 			colors: {
 				'mint-tulip': {
 					50: '#effefa',
