@@ -80,6 +80,7 @@
 		projects .
 	</p>
 	<a
+		target="_blank"
 		href="https://github.com/tayfunceylan"
 		class="mt-7 rounded-md border-2 border-mint-tulip-500 p-4 text-center font-mono text-mint-tulip-500/80 transition-colors duration-500 hover:bg-mint-tulip-500/20 hover:text-mint-tulip-400"
 	>
@@ -136,27 +137,32 @@
 
 <Section title="Where I’ve Worked" id="jobs">
 	<div class="relative">
-		<div class="scrollbar-none flex overflow-scroll">
+		<div class="scrollbar-none flex overflow-scroll md:flex-col">
 			{#each jobs as { company, title, when, href, points }, i}
-				<div
-					class="h-9 shrink-0 basis-36 flex-nowrap truncate text-nowrap pt-2 text-center font-mono text-sm transition-colors has-[:checked]:bg-mint-tulip-500/20"
+				<label
+					for={company}
+					class="h-10 min-w-36 border-b-[1px] border-mint-tulip-500 transition-all duration-700 first:rounded-l
+						last:rounded-r odd:bg-mint-tulip-700/5 even:bg-mint-tulip-300/5 has-[:checked]:border-b-4 has-[:checked]:bg-mint-tulip-500/25 md:w-44
+						md:first:rounded-l-none md:last:rounded-r-none
+					"
 				>
 					<input type="radio" name="company" id={company} class="peer hidden" checked={i === 0} />
-					<label for={company} class="h-5 transition-colors peer-checked:text-mint-tulip-500">
+					<div
+						class="text-nowrap p-2 text-center font-mono text-sm transition peer-checked:text-mint-tulip-500"
+					>
 						{company}
-					</label>
+					</div>
 					<div
-						class="mt-1 h-1 w-full translate-y-3/4 bg-mint-tulip-500 transition-transform duration-1000 ease-in-out peer-checked:translate-y-0"
-					/>
-					<div
-						class="absolute left-0 translate-y-1/4 space-y-3 text-wrap py-5 text-left font-sans
-							opacity-0 transition-all duration-1000 ease-in-out peer-checked:translate-y-0 peer-checked:opacity-100
+						class="pointer-events-none absolute left-0 translate-y-1/4 space-y-3 text-wrap py-5 text-left font-sans opacity-0 transition-all duration-1000
+							ease-in-out peer-checked:translate-y-0 peer-checked:opacity-100 md:left-52 md:top-0 md:py-0
 						"
 					>
 						<div>
 							<div class="flex flex-wrap items-center space-x-1 text-lg">
 								<div class="font-semibold">{title}</div>
-								<a {href} class="text-mint-tulip-500">@{company}</a>
+								<a {href} class="pointer-events-auto text-mint-tulip-500" target="_blank"
+									>@{company}</a
+								>
 							</div>
 							<div class="text-sm">{when}</div>
 						</div>
@@ -171,7 +177,7 @@
 							{/each}
 						</div>
 					</div>
-				</div>
+				</label>
 			{/each}
 		</div>
 	</div>
@@ -195,6 +201,7 @@
 		Feel free to get in touch. You can find me on these social media platforms.
 	</p>
 	<a
+		target="_blank"
 		href="https://www.xing.com/profile/Tayfun_Ceylan3"
 		class="mx-auto mt-2 w-fit rounded-md border-2 border-mint-tulip-500 p-4 font-mono text-mint-tulip-500/80 transition-colors duration-500 hover:bg-mint-tulip-500/20 hover:text-mint-tulip-400"
 	>
