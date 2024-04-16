@@ -43,7 +43,7 @@
 				{#each sections as section, i}
 					<a
 						href={i != 0 ? `#${section.toLowerCase()}` : ''}
-						class="group/section space-y-0.5 py-4"
+						class="group/section min-w-32 space-y-0.5 py-4"
 						onclick={toggle}
 					>
 						<div class="text-center font-mono text-lg text-mint-tulip-500">
