@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Logo from '$lib/svg/Logo.svelte';
 
-	let open = true;
+	let open = false;
 	const toggle = () => (open = !open);
 	const sections = ['Hi', 'About', 'Jobs', 'Projects', 'Contact'];
 </script>
