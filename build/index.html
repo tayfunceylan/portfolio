@@ -5,16 +5,16 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link href="./_app/immutable/assets/0.DCG4Ugb4.css" rel="stylesheet" />
-		<link rel="modulepreload" href="./_app/immutable/entry/start.DFErlrxF.js" />
-		<link rel="modulepreload" href="./_app/immutable/chunks/entry.CRsU-MXD.js" />
+		<link href="./_app/immutable/assets/0.VLxNmeHM.css" rel="stylesheet" />
+		<link rel="modulepreload" href="./_app/immutable/entry/start.BUUlSiWL.js" />
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.D-h1sRIe.js" />
 		<link rel="modulepreload" href="./_app/immutable/chunks/runtime.Cy1iCttA.js" />
 		<link rel="modulepreload" href="./_app/immutable/chunks/utils.BSJX-nVd.js" />
-		<link rel="modulepreload" href="./_app/immutable/entry/app.Bi8WK5nz.js" />
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CGrIckGP.js" />
 		<link rel="modulepreload" href="./_app/immutable/chunks/disclose-version.z428X2uo.js" />
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.3GgVPCvD.js" />
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.BJXVvdiA.js" />
 		<link rel="modulepreload" href="./_app/immutable/chunks/lifecycle.CJUEb_CW.js" />
-		<link rel="modulepreload" href="./_app/immutable/nodes/2.B6Gkm1gJ.js" />
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.DNekWgFM.js" />
 	</head>
 	<body
 		data-sveltekit-preload-data="hover"
@@ -25,10 +25,11 @@
 			<nav
 				class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800 px-7 py-4 shadow-xl shadow-blue-zodiac-800 transition-all duration-1000 md:px-9"
 			>
-				<a href="/" class="text-4xl font-semibold text-mint-tulip-500">T</a>
-				<label class="peer relative size-10 text-mint-tulip-500 md:hidden"
-					><div class="absolute left-3/4 top-1/2">
-						<input type="checkbox" class="peer hidden" />
+				<a href="/" class="z-10 text-4xl font-semibold text-mint-tulip-500">T</a>
+				<label for="navbar" class="peer relative size-10 text-mint-tulip-500 md:hidden"
+					><div class="absolute z-20 size-14"></div>
+					<div class="absolute left-3/4 top-1/2">
+						<input type="checkbox" id="navbar" class="peer hidden" checked />
 						<span
 							class="absolute z-20 h-1 w-7 -translate-x-[calc(50%+7px)] -translate-y-[calc(50%+10px)] scale-x-150 bg-current transition duration-500 ease-in peer-checked:-translate-x-1/2 peer-checked:-translate-y-1/2 peer-checked:rotate-[405deg] peer-checked:scale-100"
 						></span>
@@ -39,86 +40,83 @@
 							class="absolute z-20 h-1 w-7 -translate-x-[calc(50%-7px)] -translate-y-[calc(50%-10px)] scale-x-50 bg-current transition duration-500 ease-in peer-checked:-translate-x-1/2 peer-checked:-translate-y-1/2 peer-checked:rotate-[315deg] peer-checked:scale-100"
 						></span>
 						<div
-							class="group pointer-events-none fixed left-0 top-0 flex h-screen translate-x-[0vw] flex-nowrap transition duration-1000 peer-checked:-translate-x-[100vw]"
+							class="fixed right-0 top-0 -z-10 h-screen w-screen translate-x-full opacity-0 backdrop-blur transition-opacity duration-500 peer-checked:translate-x-0 peer-checked:opacity-100"
+						></div>
+						<div
+							class="fixed right-0 top-[50vh] z-20 my-auto flex -translate-y-1/2 translate-x-full flex-col items-center justify-center transition duration-500 ease-in-out peer-checked:-translate-x-[calc(37.5vw-50%)]"
 						>
-							<button
-								class="pointer-events-auto h-full w-[125vw] scale-0 opacity-0 backdrop-blur-sm transition-opacity duration-1000 peer-checked:group-[]:scale-100 peer-checked:group-[]:opacity-100"
-							></button>
-							<div
-								class="pointer-events-none flex h-full w-[75vw] flex-col items-center justify-center bg-blue-zodiac-700 ease-out"
-							>
-								<!--[--><!--[--><a
-									href="#about"
-									class="group/section pointer-events-auto space-y-0.5 py-4"
-									><div class="text-center font-mono text-lg text-mint-tulip-500">01.</div>
-									<div
-										class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
-									>
-										About
-									</div></a
-								><!--]--><!--[--><a
-									href="#jobs"
-									class="group/section pointer-events-auto space-y-0.5 py-4"
-									><div class="text-center font-mono text-lg text-mint-tulip-500">02.</div>
-									<div
-										class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
-									>
-										Jobs
-									</div></a
-								><!--]--><!--[--><a
-									href="#projects"
-									class="group/section pointer-events-auto space-y-0.5 py-4"
-									><div class="text-center font-mono text-lg text-mint-tulip-500">03.</div>
-									<div
-										class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
-									>
-										Projects
-									</div></a
-								><!--]--><!--[--><a
-									href="#contact"
-									class="group/section pointer-events-auto space-y-0.5 py-4"
-									><div class="text-center font-mono text-lg text-mint-tulip-500">04.</div>
-									<div
-										class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
-									>
-										Contact
-									</div></a
-								><!--]--><!--]-->
-							</div>
+							<!--[--><!--[--><a href="" class="group/section space-y-0.5 py-4"
+								><div class="text-center font-mono text-lg text-mint-tulip-500">00.</div>
+								<div
+									class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
+								>
+									Hi
+								</div></a
+							><!--]--><!--[--><a href="#about" class="group/section space-y-0.5 py-4"
+								><div class="text-center font-mono text-lg text-mint-tulip-500">01.</div>
+								<div
+									class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
+								>
+									About
+								</div></a
+							><!--]--><!--[--><a href="#jobs" class="group/section space-y-0.5 py-4"
+								><div class="text-center font-mono text-lg text-mint-tulip-500">02.</div>
+								<div
+									class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
+								>
+									Jobs
+								</div></a
+							><!--]--><!--[--><a href="#projects" class="group/section space-y-0.5 py-4"
+								><div class="text-center font-mono text-lg text-mint-tulip-500">03.</div>
+								<div
+									class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
+								>
+									Projects
+								</div></a
+							><!--]--><!--[--><a href="#contact" class="group/section space-y-0.5 py-4"
+								><div class="text-center font-mono text-lg text-mint-tulip-500">04.</div>
+								<div
+									class="text-center font-mono text-lg text-slate-400 transition duration-300 group-hover/section:text-mint-tulip-500"
+								>
+									Contact
+								</div></a
+							><!--]--><!--]-->
 						</div>
 					</div></label
 				>
+				<div
+					class="fixed right-0 top-0 z-10 h-screen w-9/12 translate-x-full bg-blue-zodiac-700 transition duration-500 ease-in-out peer-has-[:checked]:translate-x-0 md:hidden"
+				></div>
 				<div class="hidden md:flex">
-					<!--[--><!--[--><a
-						href="#about"
-						class="group pointer-events-auto flex items-center space-x-1 px-3"
+					<!--[--><!--[--><a href="" class="group flex items-center space-x-1 px-3"
+						><div class="text-center font-mono text-sm text-mint-tulip-500">00.</div>
+						<div
+							class="text-center font-mono text-sm text-slate-300 transition duration-300 group-hover:text-mint-tulip-500"
+						>
+							Hi
+						</div></a
+					><!--]--><!--[--><a href="#about" class="group flex items-center space-x-1 px-3"
 						><div class="text-center font-mono text-sm text-mint-tulip-500">01.</div>
 						<div
 							class="text-center font-mono text-sm text-slate-300 transition duration-300 group-hover:text-mint-tulip-500"
 						>
 							About
 						</div></a
-					><!--]--><!--[--><a
-						href="#jobs"
-						class="group pointer-events-auto flex items-center space-x-1 px-3"
+					><!--]--><!--[--><a href="#jobs" class="group flex items-center space-x-1 px-3"
 						><div class="text-center font-mono text-sm text-mint-tulip-500">02.</div>
 						<div
 							class="text-center font-mono text-sm text-slate-300 transition duration-300 group-hover:text-mint-tulip-500"
 						>
 							Jobs
 						</div></a
-					><!--]--><!--[--><a
-						href="#projects"
-						class="group pointer-events-auto flex items-center space-x-1 px-3"
+					><!--]--><!--[--><a href="#projects" class="group flex items-center space-x-1 px-3"
 						><div class="text-center font-mono text-sm text-mint-tulip-500">03.</div>
 						<div
 							class="text-center font-mono text-sm text-slate-300 transition duration-300 group-hover:text-mint-tulip-500"
 						>
 							Projects
 						</div></a
-					><!--]--><!--[--><a
-						href="#contact"
-						class="group pointer-events-auto flex items-center space-x-1 px-3"
+					><!--]--><!--[--><a href="#contact" class="group flex items-center space-x-1 px-3"
 						><div class="text-center font-mono text-sm text-mint-tulip-500">04.</div>
 						<div
 							class="text-center font-mono text-sm text-slate-300 transition duration-300 group-hover:text-mint-tulip-500"
@@ -581,7 +579,7 @@
 
 			<script>
 				{
-					__sveltekit_cbihr1 = {
+					__sveltekit_9othnb = {
 						base: new URL('.', location).pathname.slice(0, -1)
 					};
 
@@ -590,8 +588,8 @@
 					const data = [null, null];
 
 					Promise.all([
-						import('./_app/immutable/entry/start.DFErlrxF.js'),
-						import('./_app/immutable/entry/app.Bi8WK5nz.js')
+						import('./_app/immutable/entry/start.BUUlSiWL.js'),
+						import('./_app/immutable/entry/app.CGrIckGP.js')
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
