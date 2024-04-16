@@ -153,18 +153,22 @@
 						{company}
 					</div>
 					<div
-						class="pointer-events-none absolute left-0 translate-y-1/4 space-y-3 text-wrap py-5 text-left font-sans opacity-0 transition-all duration-1000
+						class="pointer-events-none absolute left-0 translate-y-1/4 space-y-2 text-wrap py-5 text-left font-sans opacity-0 transition-all duration-1000
 							ease-in-out peer-checked:translate-y-0 peer-checked:opacity-100 md:left-52 md:top-0 md:py-0
 						"
 					>
 						<div>
 							<div class="flex flex-wrap items-center space-x-1 text-lg">
-								<div class="font-semibold">{title}</div>
-								<a {href} class="pointer-events-auto text-mint-tulip-500" target="_blank"
-									>@{company}</a
-								>
+								<div class="font-semibold leading-tight">
+									{title}
+									<a
+										{href}
+										class="pointer-events-auto text-nowrap text-mint-tulip-500"
+										target="_blank">@{company}</a
+									>
+								</div>
 							</div>
-							<div class="text-sm">{when}</div>
+							<div class="py-1 text-sm">{when}</div>
 						</div>
 						<div class="space-y-1">
 							{#each points as point}
