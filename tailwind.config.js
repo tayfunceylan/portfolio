@@ -14,7 +14,7 @@ export default {
 				}
 			},
 			animation: {
-				typing: 'typing 3s steps(40, end), blink-caret 0.75s step-end infinite'
+				typing: 'typing 4s steps(40, end), blink-caret 0.75s step-end infinite'
 			},
 			colors: {
 				'mint-tulip': {
