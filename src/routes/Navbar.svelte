@@ -63,10 +63,11 @@
 		class="fixed right-0 top-0 z-10 h-screen w-9/12 translate-x-full bg-blue-zodiac-700 transition duration-500 ease-in-out peer-has-[:checked]:translate-x-0 md:hidden"
 	/>
 	<div class="hidden md:flex">
+		<!-- animate-slide-in-1 animate-slide-in-2 animate-slide-in-3 animate-slide-in-4 animate-slide-in-5 -->
 		{#each sections as section, i}
 			<a
 				href={i != 0 ? `#${section.toLowerCase()}` : ''}
-				class="group flex items-center space-x-1 px-3"
+				class="group flex items-center space-x-1 px-3 {`animate-slide-in-${i + 1}`}"
 			>
 				<div class="text-center font-mono text-sm text-mint-tulip-500">
 					{i.toString().padStart(2, '0')}.
