@@ -59,7 +59,7 @@
 </script>
 
 <Section title="Where I’ve Worked" id="jobs" sectionNumber="2">
-	<div class="relative h-80">
+	<div class="relative min-h-[32rem] sm:min-h-96 lg:min-h-80">
 		<div class="scrollbar-none flex overflow-scroll md:flex-col">
 			{#each jobs as { company, title, when, href, points }, i}
 				<label
