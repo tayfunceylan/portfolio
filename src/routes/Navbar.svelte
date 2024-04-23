@@ -11,11 +11,12 @@
 		initX = event.touches[0].clientX;
 		initY = event.touches[0].clientY;
 	}
-	function ontouchend(event: TouchEvent) {
+	function ontouchend() {
 		initX = initY = null;
 	}
-	function ontouchmove(event: TouchEvent) {
-		if (initX === null || initY === null) return;
+	function ontouchmove(event: TouchEvent & { currentTarget: EventTarget & Document }) {
+		if (initX === null || initY === null || window.getSelection()?.toString()) return;
+		console.log(event.type);
 		const diffX = initX - event.touches[0].clientX;
 		const diffY = initY - event.touches[0].clientY;
 		if (Math.abs(diffY) < 20) {
