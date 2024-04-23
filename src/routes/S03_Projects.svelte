@@ -21,7 +21,7 @@
 		{
 			title: 'E-Paper Info Screen',
 			points: [
-				'E-Paper Display hooked up with an ESP-32 to Display various information such as weather, news, train departure, appointments and to do lists.'
+				'E-Paper Display hooked up with an ESP-32 to display various information such as weather, news, train departure, appointments and to do lists.'
 			],
 			tools: ['C#', 'Microcontroller', 'ESP-32', 'E-Paper', 'Arduino'],
 			href: 'https://github.com/tayfunceylan/epaper'
