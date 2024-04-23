@@ -40,17 +40,32 @@ export default {
 					'0%': { transform: 'translateY(-15px)', opacity: '0' },
 					'75%': { transform: 'translateY(-15px)', opacity: '0' },
 					'95%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'slide-in': {
+					'0%': { transform: 'scale(0.8)', 'transform-origin': 'top', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'slide-left': {
+					'0%': { transform: 'translateX(-100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-right': {
+					'0%': { transform: 'translateX(100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				typing:
 					'typing 4s steps(40, end), blink-caret 0.75s step-end infinite, slide-in-0 1.5s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out',
 				'slide-in-0': 'slide-in-0 1.5s ease-out',
 				'slide-in-1': 'slide-in-1 1.5s ease-out',
 				'slide-in-2': 'slide-in-2 1.5s ease-out',
 				'slide-in-3': 'slide-in-3 1.5s ease-out',
 				'slide-in-4': 'slide-in-4 1.5s ease-out',
-				'slide-in-5': 'slide-in-5 1.5s ease-out'
+				'slide-in-5': 'slide-in-5 1.5s ease-out',
+				'slide-left': 'slide-left 1s ease-out',
+				'slide-right': 'slide-right 1s ease-out'
 			},
 			colors: {
 				'mint-tulip': {

@@ -9,7 +9,7 @@
 <nav
 	class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800 px-7 py-4 shadow-xl shadow-blue-zodiac-800 transition-all duration-1000 md:px-9"
 >
-	<a href="/" class="z-10 text-4xl font-semibold text-mint-tulip-500">T</a>
+	<a href="/" class="z-10 animate-slide-in-0 text-4xl font-semibold text-mint-tulip-500">T</a>
 	<label for="navbar" class="peer relative size-10 text-mint-tulip-500 md:hidden">
 		<div class="absolute z-20 size-14"></div>
 		<div class="absolute left-3/4 top-1/2">

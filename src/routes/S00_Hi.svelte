@@ -18,7 +18,7 @@
 	</p>
 	<p class="animate-slide-in-3 max-w-lg">
 		I’m an IT student specializing in cryptography. In my free time I like tinker with programming
-		projects .
+		projects.
 	</p>
 	<a
 		target="_blank"

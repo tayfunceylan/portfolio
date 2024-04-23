@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Section from './Section.svelte';
+	let xing = 'https://www.xing.com/profile/Tayfun_Ceylan3';
 </script>
 
 <Section title="Get In Touch" id="contact" sectionNumber="4">
@@ -9,9 +10,10 @@
 	</p>
 	<a
 		target="_blank"
-		href="https://www.xing.com/profile/Tayfun_Ceylan3"
+		href={xing}
 		class="mx-auto mt-2 w-fit rounded-md border-2 border-mint-tulip-500 p-4 font-mono text-mint-tulip-500/80 transition-colors duration-500 hover:bg-mint-tulip-500/20 hover:text-mint-tulip-400"
 	>
 		Say Hello
 	</a>
+	<slot></slot>
 </Section>
