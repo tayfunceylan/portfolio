@@ -7,34 +7,31 @@
 </script>
 
 <nav
-	class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800 px-7 py-4 shadow-xl shadow-blue-zodiac-800 transition-all duration-1000 md:px-9"
+	class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800 p-8 shadow-xl shadow-blue-zodiac-800 transition-all duration-1000 md:px-9"
 >
 	<a href="/" class="z-10 animate-slide-in-0 text-4xl font-semibold text-mint-tulip-500">T</a>
-	<label
-		for="navbar"
-		class="peer relative size-10 animate-slide-in-0 text-mint-tulip-500 md:hidden"
-	>
+	<label for="navbar" class="peer relative size-10 text-mint-tulip-500 md:hidden">
 		<div class="absolute z-20 size-14"></div>
 		<div class="absolute left-3/4 top-1/2">
 			<input type="checkbox" id="navbar" class="peer hidden" bind:checked={open} />
 			<span
-				class="absolute z-20 h-1 w-7 -translate-x-[calc(50%+7px)] -translate-y-[calc(50%+10px)] scale-x-150 bg-current transition duration-500 ease-in
-						peer-checked:-translate-x-1/2 peer-checked:-translate-y-1/2
-						peer-checked:rotate-[405deg]
-						peer-checked:scale-100
+				class="absolute z-20 h-1 w-7 -translate-x-[calc(50%+7px)] -translate-y-[calc(50%+10px)] scale-x-150 animate-slide-in-0 bg-current transition duration-500
+						ease-in peer-checked:-translate-x-1/2
+						peer-checked:-translate-y-1/2
+						peer-checked:rotate-[405deg] peer-checked:scale-100
 					"
 			></span>
 			<span
-				class="absolute z-20 h-1 w-7 -translate-x-1/2 -translate-y-1/2 bg-current transition duration-500 ease-in
-						peer-checked:translate-y-4
-						peer-checked:opacity-0
+				class="absolute z-20 h-1 w-7 -translate-x-1/2 -translate-y-1/2 animate-slide-in-0 bg-current transition duration-500
+						ease-in
+						peer-checked:translate-y-4 peer-checked:opacity-0
 					"
 			></span>
 			<span
-				class="absolute z-20 h-1 w-7 -translate-x-[calc(50%-7px)] -translate-y-[calc(50%-10px)] scale-x-50 bg-current transition duration-500 ease-in
-						peer-checked:-translate-x-1/2 peer-checked:-translate-y-1/2
-						peer-checked:rotate-[315deg]
-						peer-checked:scale-100
+				class="absolute z-20 h-1 w-7 -translate-x-[calc(50%-7px)] -translate-y-[calc(50%-10px)] scale-x-50 animate-slide-in-0 bg-current transition duration-500
+						ease-in peer-checked:-translate-x-1/2
+						peer-checked:-translate-y-1/2
+						peer-checked:rotate-[315deg] peer-checked:scale-100
 					"
 			></span>
 			<div
