@@ -4,10 +4,36 @@
 	let open = false;
 	const toggle = () => (open = !open);
 	const sections = ['Hi', 'About', 'Jobs', 'Projects', 'Contact'];
+
+	let initX: number | null = null;
+	let initY: number | null = null;
+	function ontouchstart(event: TouchEvent) {
+		initX = event.touches[0].clientX;
+		initY = event.touches[0].clientY;
+	}
+	function ontouchend(event: TouchEvent) {
+		initX = initY = null;
+	}
+	function ontouchmove(event: TouchEvent) {
+		if (initX === null || initY === null) return;
+		const diffX = initX - event.touches[0].clientX;
+		const diffY = initY - event.touches[0].clientY;
+		if (Math.abs(diffY) < 20) {
+			if (diffX > 50) {
+				open = true;
+				initX = initY = null;
+			} else if (diffX < -50) {
+				open = false;
+				initX = initY = null;
+			}
+		}
+	}
 </script>
 
+<svelte:document {ontouchstart} {ontouchend} {ontouchmove} />
+
 <nav
-	class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800 p-8 shadow-xl shadow-blue-zodiac-800 transition-all duration-1000 md:px-9"
+	class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800 px-8 pt-5 shadow-xl shadow-blue-zodiac-800 transition-all duration-1000 sm:pt-8 md:px-9"
 >
 	<a href="/" class="z-10 animate-slide-in-0 text-4xl font-semibold text-mint-tulip-500">T</a>
 	<label for="navbar" class="peer relative size-10 text-mint-tulip-500 md:hidden">
