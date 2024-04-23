@@ -9,14 +9,22 @@
 				'Personalisierte Vertretungsplanberichte.',
 				'Ein Service für den Vertretungsplan der GES Bochum.'
 			],
-			tools: ['VS-Code', 'Python', 'Cron', 'Telegram-Bot-API'],
+			tools: ['Python', 'Cron', 'Telegram-Bot-API'],
 			href: 'https://github.com/tayfunceylan/vertretungsplan'
 		},
 		{
 			title: 'Pet Feeder',
 			points: ['Eine App um das Füttern von Haustieren zu tracken und vieles mehr.'],
-			tools: ['VS-Code', 'Nuxt', 'Vue', 'Python', 'Django Rest Framework'],
+			tools: ['Nuxt', 'Vue', 'Python', 'Django Rest Framework'],
 			href: 'https://github.com/tayfunceylan/pet-feeder'
+		},
+		{
+			title: 'E-Paper Info Screen',
+			points: [
+				'E-Paper Display hooked up with an ESP-32 to Display various information such as weather, news, train departure, appointments and to do lists.'
+			],
+			tools: ['C#', 'Microcontroller', 'ESP-32', 'E-Paper', 'Arduino'],
+			href: 'https://github.com/tayfunceylan/epaper'
 		},
 		{
 			title: 'ÖPNV FahrplanBot',
@@ -26,7 +34,7 @@
 				Create line filter to only show the lines you need. \
 				You can also choose a direction. Refresh the message at any time.'
 			],
-			tools: ['VS-Code', 'Python', 'Insomnia', 'Docker', 'Telegram-Bot-API'],
+			tools: ['Python', 'Insomnia', 'Docker', 'Telegram-Bot-API'],
 			href: 'https://github.com/tayfunceylan/FahrplanBot'
 		}
 	];
