@@ -89,7 +89,7 @@
 				>
 					<input type="radio" name="company" id={company} class="peer hidden" checked={i === 0} />
 					<div
-						class="text-nowrap p-2 text-center font-mono text-sm transition peer-checked:text-mint-tulip-500"
+						class="mt-[1px] text-nowrap p-2 text-center font-mono text-sm transition peer-checked:text-mint-tulip-500 md:text-left"
 					>
 						{company}
 					</div>
