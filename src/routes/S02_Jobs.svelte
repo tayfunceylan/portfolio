@@ -56,6 +56,16 @@
 			]
 		}
 	];
+
+	let isDown = false;
+	let container: Element;
+	const onmousedown = () => (isDown = true);
+	const onmouseup = () => (isDown = false);
+	const onmousemove = (e: MouseEvent) => {
+		console.log('mousemove');
+		if (!isDown) return;
+		container.scrollLeft -= e.movementX;
+	};
 </script>
 
 <Section title="Where I’ve Worked" id="jobs" sectionNumber="2">
@@ -63,13 +73,18 @@
 		<div
 			class="scrollbar-none flex overflow-scroll md:flex-col"
 			ontouchmove={(e) => e.stopPropagation()}
+			aria-hidden
+			bind:this={container}
+			{onmousedown}
+			{onmousemove}
+			{onmouseup}
 		>
 			{#each jobs as { company, title, when, href, points }, i}
 				<label
 					for={company}
 					class="h-10 min-w-36 border-b-[1px] border-mint-tulip-500 transition-all duration-700 first:rounded-l
 						last:rounded-r odd:bg-mint-tulip-700/5 even:bg-mint-tulip-300/5 has-[:checked]:border-b-4 has-[:checked]:bg-mint-tulip-500/25 md:w-44
-						md:first:rounded-l-none md:last:rounded-r-none
+						md:border-b-0 md:!bg-inherit md:first:rounded-l-none md:has-[:checked]:border-b-0 md:has-[:checked]:border-l-8 md:has-[:checked]:!bg-mint-tulip-500/25
 					"
 				>
 					<input type="radio" name="company" id={company} class="peer hidden" checked={i === 0} />

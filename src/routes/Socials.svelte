@@ -6,7 +6,7 @@
 	let xing = 'https://www.xing.com/profile/Tayfun_Ceylan3';
 </script>
 
-<div class="observe-100 mx-auto mb-14 w-fit">
+<div class="observe mx-auto mb-14 w-fit">
 	<div class="mb-2 flex h-6 justify-evenly md:pointer-events-none md:opacity-0">
 		<Github href={github} />
 		<Xing href={xing} />

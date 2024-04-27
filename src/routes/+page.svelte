@@ -7,45 +7,51 @@
 	import S04_Contact from './S04_Contact.svelte';
 	import Socials from './Socials.svelte';
 
+	
 	$effect(() => {
-		const callback = (
-			observerEntries: IntersectionObserverEntry[],
-			observer: IntersectionObserver
-		) => {
-			observerEntries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					entry.target.classList.remove('opacity-0');
-					entry.target.classList.add('animate-slide-in');
-					observer.unobserve(entry.target);
-				} else {
-					entry.target.classList.add('opacity-0');
-				}
-			});
+		const show = (element: Element) => {
+			element.classList.remove('opacity-0');
+			element.classList.add('animate-slide-in');
 		};
-
+		const hide = (element: Element) => {
+			element.classList.add('opacity-0');
+		};
+		
 		const observer: IntersectionObserver = new IntersectionObserver(
-			(entries) => callback(entries, observer),
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						show(entry.target);
+						observer.unobserve(entry.target);
+					} else hide(entry.target);
+				});
+			},
 			{
 				rootMargin: '-0% 0% -25% 0%'
 			}
 		);
-		const observer_100: IntersectionObserver = new IntersectionObserver(
-			(entries) => callback(entries, observer_100),
-			{
-				rootMargin: '-0% 0% -100px 0%'
-			}
+		const endOfPageObserver = new IntersectionObserver((entries) =>
+			entries
+				.filter((entry) => entry.isIntersecting)
+				.forEach(() => {
+					document.querySelectorAll('.observe').forEach((section) => show(section));
+				})
 		);
 
-		document.querySelectorAll('.observe').forEach((section) => {
-			observer.observe(section);
-		});
-		document.querySelectorAll('.observe-100').forEach((section) => {
-			observer_100.observe(section);
-		});
+		document //
+			.querySelectorAll('.observe')
+			.forEach((section) => {
+				observer.observe(section);
+			});
+		document //
+			.querySelectorAll('.end')
+			.forEach((section) => {
+				endOfPageObserver.observe(section);
+			});
 
 		return () => {
 			observer.disconnect();
-			observer_100.disconnect();
+			endOfPageObserver.disconnect();
 		};
 	});
 </script>
@@ -57,3 +63,4 @@
 <S03_Projects />
 <S04_Contact />
 <Socials />
+<div class="end h-1" />
