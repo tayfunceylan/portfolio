@@ -26,6 +26,10 @@ Look at these screenshots or [look for yourself](https://tyfn.de).
     <img src="./images/portfolio-home.png" width="72%">
 </p>
 
+## Configuration and Customization
+
+If you want to use this project for your own homepage, you can easily customize the text and links. You only need to change the text inside `/src/lib/config.ts`. You should also change the picture to yourself in `/src/lib/images` After that you run `pnpnm i && pnpm build` and then you have your own homepage consisting of HTML, CSS and JS inside the `/build` directory. Now you only need to host it somewhere.
+
 ## Dev Container
 
 This repository provides a dev container with all necessary tools to have a consistent and pleasant development experience.
