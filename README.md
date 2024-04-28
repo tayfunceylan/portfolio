@@ -15,8 +15,8 @@ The goal of this project is to enhance my skills and having fun along the way.
 ## How does it look like?
 
 <p align="center">
-    <img src="./static/portfolio-home-mobile.png" width="26.1%">
-    <img src="./static/portfolio-home.png" width="72%">
+    <img src="./images/portfolio-home-mobile.png" width="26.1%">
+    <img src="./images/portfolio-home.png" width="72%">
 </p>
 
 ## Dev Container
