@@ -3,6 +3,7 @@
 Hello, this is my personal homepage.
 
 Goals of this project are:
+
 - creating a personal homepage
 - learning Svelte, TypeScript, Tailwind CSS and Docker Dev Container
 - having fun along the way
@@ -17,6 +18,8 @@ Goals of this project are:
 - optimized for both mobile and desktop
 
 ## How does it look like?
+
+Look at these screenshots or [look for yourself](https://tyfn.de).
 
 <p align="center">
     <img src="./images/portfolio-home-mobile.png" width="26.1%">
