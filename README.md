@@ -1,7 +1,11 @@
 # Portfolio
 
-Hello, this is my personal homepage. In this project, I want to learn Svelte, TypeScript, Tailwind CSS and Docker Dev Container.
-The goal of this project is to enhance my skills and having fun along the way.
+Hello, this is my personal homepage.
+
+Goals of this project are:
+- creating a personal homepage
+- learning Svelte, TypeScript, Tailwind CSS and Docker Dev Container
+- having fun along the way
 
 ## Features
 
