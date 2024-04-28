@@ -6,8 +6,8 @@
 	let container: Element;
 	const onmousedown = () => (isDown = true);
 	const onmouseup = () => (isDown = false);
+	const onmouseleave = () => (isDown = false);
 	const onmousemove = (e: MouseEvent) => {
-		console.log('mousemove');
 		if (!isDown) return;
 		container.scrollLeft -= e.movementX;
 	};
@@ -23,6 +23,7 @@
 			{onmousedown}
 			{onmousemove}
 			{onmouseup}
+			{onmouseleave}
 		>
 			{#each jobs.list as { company, title, when, href, points }, i}
 				<label
