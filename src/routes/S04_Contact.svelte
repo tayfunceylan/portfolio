@@ -1,19 +1,18 @@
 <script lang="ts">
+	import { contact } from '$lib/config';
 	import Section from './Section.svelte';
-	let xing = 'https://www.xing.com/profile/Tayfun_Ceylan3';
 </script>
 
-<Section title="Get In Touch" id="contact" sectionNumber="4">
-	<p class="text-center">
-		Although I’m not currently looking for any new opportunities, my inbox is always open. Whether
-		you have a question or just want to say hi, I’ll try my best to get back to you!
-	</p>
+<Section title={contact.section_title} id={contact.section_id} sectionNumber="4">
+	{#each contact.paragraphs as paragraph}
+		<p>{@html paragraph}</p>
+	{/each}
 	<a
 		target="_blank"
-		href={xing}
+		href={contact.button.href}
 		class="mx-auto mt-2 w-fit rounded-md border-2 border-mint-tulip-500 p-4 font-mono text-mint-tulip-500/80 transition-colors duration-500 hover:bg-mint-tulip-500/20 hover:text-mint-tulip-400"
 	>
-		Say Hello
+		{contact.button.text}
 	</a>
 	<slot></slot>
 </Section>

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Logo from '$lib/svg/Logo.svelte';
+	import { hi, about, jobs, projects, contact } from "$lib/config";
+	import { navbar } from "$lib/config";
 
 	let open = false;
 	const toggle = () => (open = !open);
-	const sections = ['Hi', 'About', 'Jobs', 'Projects', 'Contact'];
-
+	const sections = [hi, about, jobs, projects, contact].map((section) => section.section_id);
 	let initX: number | null = null;
 	let initY: number | null = null;
 	function ontouchstart(event: TouchEvent) {
@@ -36,7 +36,7 @@
 <nav
 	class="fixed left-1/2 top-0 z-10 flex w-full max-w-screen-lg -translate-x-1/2 items-center justify-between bg-blue-zodiac-800 px-8 pt-5 shadow-xl shadow-blue-zodiac-800 transition-all duration-1000 sm:pt-8 md:px-9"
 >
-	<a href="/" class="z-10 animate-slide-in-0 text-4xl font-semibold text-mint-tulip-500">T</a>
+	<a href="/" class="z-10 animate-slide-in-0 text-3xl font-semibold text-mint-tulip-500">{navbar.logo_text}</a>
 	<label for="navbar" class="peer relative size-10 text-mint-tulip-500 md:hidden">
 		<div class="absolute z-20 size-14"></div>
 		<div class="absolute left-3/4 top-1/2">

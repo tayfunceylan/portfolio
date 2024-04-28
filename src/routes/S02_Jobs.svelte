@@ -1,61 +1,6 @@
 <script lang="ts">
+	import { jobs } from '$lib/config';
 	import Section from './Section.svelte';
-
-	const jobs = [
-		{
-			company: 'ZPP INGENIEURE',
-			title: 'Werkstudent IT-Security',
-			when: 'April 2022 - today',
-			href: 'https://zpp.de/',
-			points: [
-				'looking for security issues, bugs and unwanted behaviour',
-				'implementing security measures',
-				'invo-lved in web development',
-				'working with Java, Python and Docker',
-				'occasionally some cool smaller projects'
-			]
-		},
-		{
-			company: 'Opel',
-			title: 'Kommissionierer',
-			when: 'October - December 2020, September - October 2021',
-			href: 'https://opel.de/',
-			points: [
-				'I was working full time for a month and the rest in part time',
-				'I was involved in a lot of different tasks for both Teileeingang and Teileausgang',
-				'driving an EZS 350 (Schlepper) - collecting items in cages attached to the vehicle',
-				'Nachschübe intern - changing location of items internally',
-				'Nachschübe extern - changing location of items to an external area',
-				'Greifen - picking items for costumer delivery',
-				'Konsolidierung - preparing cages for shipment',
-				'Umlagern - manually changing location of items',
-				'Einlagern - store items on a transport trolley coming in from a truck'
-			]
-		},
-		{
-			company: 'Burger King',
-			title: 'Fahrer',
-			when: 'January 2019 - April 2020',
-			href: 'https://burgerking.de/',
-			points: [
-				'most of the time I was delivering burgers to costumers homes in a Toyota Aygo',
-				'I enjoyed listing to podcasts while driving to the customer',
-				'as well as working in the kitchen',
-				'making all kinds of burgers'
-			]
-		},
-		{
-			company: 'M.S.D.',
-			title: 'Zusteller',
-			when: '2013 - 2017',
-			points: [
-				'when I turned 13 I decided to earn some extra money for myself',
-				'at first I was working for zusteller-online.de delivering magazines like TV-Movie or Bravo on my bike',
-				'later on I saw that I had better opportunities at M.S.D. to develop myself, so i applied to M.S.D.',
-				'being outside, enjoying fresh air and hearing music was refreshing'
-			]
-		}
-	];
 
 	let isDown = false;
 	let container: Element;
@@ -68,7 +13,7 @@
 	};
 </script>
 
-<Section title="Where I’ve Worked" id="jobs" sectionNumber="2">
+<Section title={jobs.section_title} id={jobs.section_id} sectionNumber="2">
 	<div class="relative min-h-[32rem] sm:min-h-96 lg:min-h-80">
 		<div
 			class="scrollbar-none flex overflow-scroll md:flex-col"
@@ -79,7 +24,7 @@
 			{onmousemove}
 			{onmouseup}
 		>
-			{#each jobs as { company, title, when, href, points }, i}
+			{#each jobs.list as { company, title, when, href, points }, i}
 				<label
 					for={company}
 					class="h-10 min-w-36 border-b-[1px] border-mint-tulip-500 transition-all duration-700 first:rounded-l
@@ -116,7 +61,7 @@
 								<div class="flex gap-2">
 									<div class=" my-auto text-mint-tulip-500">▹</div>
 									<div>
-										{point}
+										{@html point}
 									</div>
 								</div>
 							{/each}

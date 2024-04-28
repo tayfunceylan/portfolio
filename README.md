@@ -2,12 +2,34 @@
 
 Hello, this is my personal homepage. In this project, i want learn and have fun with svelte, typescript, tailwindcss and devcontainer.
 
+## Features
+
+- **fully customizable** text through a single configuration file so you can easily change the text without touching the code
+- **devcontainer**: get started easily with all tools and extensions
+- works almost entirely without JavaScript
+- small build size/bundle size of only 360kb
+- responsive design with **animations** and **transitions**
+- optimized for both mobile and desktop
+
+## How does it look like?
+
+<p align="center">
+    <img src="./static/portfolio-home-mobile.png" width="26%">
+    <img src="./static/portfolio-home.png" width="72%">
+</p>
+
 ## Dev Container
 
 This repository provides a dev container with all necessary tools to have a consistent and pleasant development experience.
 Just open the repository in Visual Studio Code and you will be prompted to open the repository in a dev container.
 It will automatically install all necessary tools and extensions.
 After that tpye localhost in your browser to see the homepage.
+
+## Without Dev Container
+
+- Install pnpm (npm should work too) and run `pnpm install` to install all dependencies.
+- Then run `pnpm dev` to start the development server.
+- Run `pnpm build` to build the static site.
 
 ## Troubleshooting
 
