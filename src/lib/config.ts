@@ -61,7 +61,7 @@ export const jobs = {
 			points: [
 				'looking for security issues, bugs and unwanted behaviour',
 				'implementing security measures',
-				'invo-lved in web development',
+				'involved in web development',
 				'working with Java, Python and Docker',
 				'occasionally some cool smaller projects'
 			]
